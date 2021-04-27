@@ -32,6 +32,12 @@ software-properties-common \
 sudo \
 xvfb
 
+# install java (jre only)
+RUN mkdir ./usr/share/man/man1
+RUN apt-get update && \
+    apt-get install -y default-jre && \
+    apt-get clean;
+
 # install chrome
 RUN wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
     dpkg -x google-chrome-stable_current_amd64.deb /opt && \
