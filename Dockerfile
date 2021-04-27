@@ -36,7 +36,6 @@ xvfb
 RUN mkdir ./usr/share/man/man1
 RUN apt-get update && \
     apt-get install -y default-jre && \
-    apt-get install -y ant && \
     apt-get clean;
 
 # install chrome
